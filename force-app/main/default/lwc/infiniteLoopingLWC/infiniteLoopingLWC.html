@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="account Loading DATA">
+        <div style="height: 300px">
+        <lightning-datatable
+            data={accountData}
+            columns={columns}
+            key-field="id"
+            enable-infinite-loading={enableInfiniteLoading}
+            oncellchange={ValidateInput}
+            onloadmore={loadMoreData}
+            draft-values=[draftValues]
+            onsave={handleSave}
+            selected-rows={selectedRows}
+        >
+        </lightning-datatable>
+        <h1>
+            {error}
+        </h1>
+    </div>
+    </lightning-card>
+    
+</template>
